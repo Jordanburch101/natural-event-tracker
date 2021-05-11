@@ -2,16 +2,69 @@
 //  Header
 // ======================================
 
-header {
+.header {
+  display: flex;
+  justify-content: space-between;
   height: 8rem;
   background-color: color(bg);
-  color: #fff;
   position: fixed;
+
   top: 0;
   right: 0;
   left: 0;
   z-index: 100;
+  ul {
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+  }
   svg {
+    padding: 0;
     fill: #fff;
   }
+  &-button {
+    padding: 2rem;
+  }
+  &-github {
+    padding-left: 1rem;
+    padding-right: 5rem;
+  }
+  button {
+    display: inline-block;
+    border: none;
+    border-radius: 2rem;
+    min-width: 12rem;
+    padding: 1rem 2rem;
+    margin: 0;
+    text-decoration: none;
+    background: #ffffff;
+    color: color(bg);
+    font-size: 1.4rem;
+    cursor: pointer;
+    text-align: center;
+    transition: background 250ms ease-in-out, transform 150ms ease,
+      color 250ms ease-in-out;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    &:hover,
+    &:focus {
+      background: color(secondary);
+      color: #fff;
+    }
+
+    &:focus {
+      outline: 1px solid #fff;
+      outline-offset: -4px;
+    }
+
+    &:active {
+      transform: scale(0.98);
+      background: color(primary);
+    }
+  }
+}
+
+.active {
+  background-color: color(primary);
 }
