@@ -17,6 +17,7 @@ const Map = ({ eventData, center, zoom }) => {
     const markers = eventData.map(ev => {
         if(ev.categories[0].id === 8) {
             return <LocationMarker 
+            key={ev.id}
             lat={ev.geometries[0].coordinates[1]} 
             lng={ev.geometries[0].coordinates[0]} 
             markerIcon={fireIcon}
@@ -27,6 +28,7 @@ const Map = ({ eventData, center, zoom }) => {
 
         } else if(ev.categories[0].id === 12) {
             return <LocationMarker 
+            key={ev.id}
             lat={ev.geometries[0].coordinates[1]} 
             lng={ev.geometries[0].coordinates[0]} 
             markerIcon={volcanoIcon}
@@ -45,7 +47,6 @@ const Map = ({ eventData, center, zoom }) => {
                 defaultZoom={ zoom }
                 options={{
                     mapTypeId: 'satellite'
-
                 }}
             >
                 {markers} 

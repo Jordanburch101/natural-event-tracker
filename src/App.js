@@ -5,6 +5,8 @@ import Map from './components/Map'
 import Loader from './components/Loader'
 import Header from './components/Header'
 
+
+
 function App() {
   const [eventData, setEventData] = useState([])
   const [loading, setLoading] = useState(false)
@@ -18,7 +20,7 @@ function App() {
       setEventData(events)
       setLoading(false)
       
-      console.log(events)
+      console.log(events) // Remove later
     }
 
     fetchEvents()
@@ -29,6 +31,7 @@ function App() {
     <div className="App">
       <Header />
       { !loading ? <Map eventData={eventData} /> : <Loader />}
+
     </div>
   );
 }

@@ -1,0 +1,35 @@
+// ======================================
+//  Location Markers & Info
+// ======================================
+
+.location-icon {
+  font-size: 3rem;
+  color: red;
+  cursor: pointer;
+}
+
+.location-markerInfo {
+  position: absolute;
+  top: 100px;
+  right: 50px;
+  width: 400px;
+  min-height: 200px;
+  padding: 20px;
+  background-color: rgba(0, 0, 0, 0.6);
+  border-radius: 10px;
+  font-size: 18px;
+  color: #fff;
+}
+
+.location-markerInfo ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.location-markerInfo li {
+  padding: 5px 0;
+}
+
+.location-Button {
+  padding: 20px;
+}

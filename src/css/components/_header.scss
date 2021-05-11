@@ -1,0 +1,17 @@
+// ======================================
+//  Header
+// ======================================
+
+header {
+  height: 8rem;
+  background-color: color(bg);
+  color: #fff;
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: 100;
+  svg {
+    fill: #fff;
+  }
+}

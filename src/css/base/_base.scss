@@ -1,0 +1,47 @@
+// ======================================
+//  Base
+// ======================================
+
+* {
+  font-family: $font-primary;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  margin: 0;
+  overflow: hidden;
+}
+
+button {
+  cursor: pointer;
+}
+
+ul {
+  list-style: none;
+}
+
+svg {
+  width: 45px;
+  margin: 1em;
+  transition: fill 200ms ease-in-out;
+  &:hover,
+  &:focus {
+    fill: color(secondary);
+  }
+}
+
+// a {
+//   outline: none;
+//   text-decoration: none;
+//   // font-size: 1.2em;
+//   color: color(primary);
+//   transition: color 200ms ease-in-out;
+//   &:hover,
+//   &:focus {
+//     color: #fff;
+//   }
+// }
