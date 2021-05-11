@@ -1,7 +1,7 @@
 // import { Icon } from '@iconify/react'
 // import locationIcon from '@iconify/icons-mdi/fire-alert'
 
-const Header = ({ setWildfireButton, wildfireButton }) => {
+const Header = ({  wildfires, storms, volcanos, setWildfires, setStorms, setVolcanos }) => {
     return (
         <header className="header">
             <ul>
@@ -13,24 +13,33 @@ const Header = ({ setWildfireButton, wildfireButton }) => {
                      </a>
                 </li>
 
-                <li className={`header-button ${wildfireButton ? "active" : ""}`}>
-                    <button onClick={() => setWildfireButton(true)}>Wildfires</button>
+                <li className="header-button"> 
+                    <button 
+                        className={`${wildfires ? "active" : ""}`}
+                        onClick={() => !wildfires ? setWildfires(true) : setWildfires(false)}>Wildfires
+                    </button>
                 </li>
 
                 <li className="header-button">
-                    <button>Storms</button>
+                    <button 
+                        className={`${storms ? "active" : ""}`}
+                        onClick={() => !storms ? setStorms(true) : setStorms(false)}>Storms
+                    </button>
                 </li>
 
                 <li className="header-button">
-                    <button>Volcanos</button>
+                    <button 
+                        className={`${volcanos ? "active" : ""}`}
+                        onClick={() => !volcanos ? setVolcanos(true) : setVolcanos(false)}>Volcanos
+                    </button>
                 </li>
             </ul>
 
             <div className="menu">
             <svg width="24" height="24" fill="none" viewBox="0 0 24 24">
-                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4.75 5.75H19.25"></path>
-                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4.75 18.25H19.25"></path>
-                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4.75 12H19.25"></path>
+                <path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5" d="M4.75 5.75H19.25"></path>
+                <path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5" d="M4.75 18.25H19.25"></path>
+                <path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5" d="M4.75 12H19.25"></path>
             </svg>
             </div>
           
@@ -39,3 +48,4 @@ const Header = ({ setWildfireButton, wildfireButton }) => {
 }
 
 export default Header
+// !selectors[0] ? setSelectors(selectors[0] = true) : setSelectors(selectors[0] = false)

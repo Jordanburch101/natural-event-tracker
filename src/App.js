@@ -12,7 +12,10 @@ function App() {
   const [loading, setLoading] = useState(false)
 
   //Button state
-  const [wildfireButton, setWildfireButton] = useState(false)
+  const [wildfires, setWildfires] = useState(true)
+  const [storms, setStorms] = useState(true)
+  const [volcanos, setVolcanos] = useState(false)
+
 
   useEffect(() => {
     const fetchEvents = async () => {
@@ -32,8 +35,20 @@ function App() {
 
   return (
     <div className="App">
-      <Header setWildfireButton={setWildfireButton} wildfireButton={wildfireButton} />
-      { !loading ? <Map eventData={eventData} /> : <Loader />}
+      <Header 
+        wildfires={wildfires}
+        storms={storms}
+        volcanos={volcanos}
+        setWildfires={setWildfires}
+        setStorms={setStorms}
+        setVolcanos={setVolcanos}
+      />
+      { !loading ? <Map 
+        eventData={eventData} 
+        wildfires={wildfires}
+        storms={storms}
+        volcanos={volcanos}
+      /> : <Loader />}
 
     </div>
   );

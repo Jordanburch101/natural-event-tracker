@@ -5,7 +5,7 @@
 .header {
   display: flex;
   justify-content: space-between;
-  height: 8rem;
+  height: 6rem;
   background-color: color(bg);
   position: fixed;
 
@@ -27,8 +27,8 @@
     padding: 2rem;
   }
   &-github {
-    padding-left: 1rem;
-    padding-right: 5rem;
+    margin-left: 1rem;
+    margin-right: 5rem;
   }
   button {
     display: inline-block;
@@ -43,28 +43,27 @@
     font-size: 1.4rem;
     cursor: pointer;
     text-align: center;
-    transition: background 250ms ease-in-out, transform 150ms ease,
+    transition: background 250ms ease-in-out, transform 250ms ease,
       color 250ms ease-in-out;
     -webkit-appearance: none;
     -moz-appearance: none;
-    &:hover,
-    &:focus {
-      background: color(secondary);
+    &:hover {
+      background: lighten(color(secondary), $amount: 10);
       color: #fff;
     }
 
-    &:focus {
-      outline: 1px solid #fff;
-      outline-offset: -4px;
-    }
+    // &:focus {
+    //   outline: 1px solid #fff;
+    //   outline-offset: -4px;
+    // }
 
     &:active {
       transform: scale(0.98);
-      background: color(primary);
+      background: color(secondary);
     }
   }
-}
-
-.active {
-  background-color: color(primary);
+  .active {
+    background: color(secondary);
+    color: #fff;
+  }
 }
