@@ -2,9 +2,10 @@
 //  Location Markers & Info
 // ======================================
 
-.location-icon {
+.fireIcon,
+.stormIcon,
+.volcanoIcon {
   font-size: 3rem;
-  color: red;
   cursor: pointer;
 }
 
@@ -32,4 +33,16 @@
 
 .location-Button {
   padding: 20px;
+}
+
+.stormIcon {
+  color: color(storm);
+}
+
+.fireIcon {
+  color: color(fire);
+}
+
+.volcanoIcon {
+  color: color(volcano);
 }

@@ -1,7 +1,17 @@
 // import { Icon } from '@iconify/react'
 // import locationIcon from '@iconify/icons-mdi/fire-alert'
+import Burger from './Burger'
 
-const Header = ({  wildfires, storms, volcanos, setWildfires, setStorms, setVolcanos }) => {
+const Header = ({  
+    wildfires, 
+    storms, 
+    volcanos, 
+    setWildfires, 
+    setStorms, 
+    setVolcanos,
+    open,
+    setOpen,
+}) => {
     return (
         <header className="header">
             <ul>
@@ -35,13 +45,9 @@ const Header = ({  wildfires, storms, volcanos, setWildfires, setStorms, setVolc
                 </li>
             </ul>
 
-            <div className="menu">
-            <svg width="24" height="24" fill="none" viewBox="0 0 24 24">
-                <path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5" d="M4.75 5.75H19.25"></path>
-                <path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5" d="M4.75 18.25H19.25"></path>
-                <path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5" d="M4.75 12H19.25"></path>
-            </svg>
-            </div>
+            <h2>Natrual Event Tracker - Powerd by NASA 🛰️</h2>
+
+            <Burger open={open} setOpen={setOpen} />
           
         </header>
     )

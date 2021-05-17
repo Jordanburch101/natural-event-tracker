@@ -22,6 +22,7 @@ const Map = ({ eventData, center, zoom, wildfires, storms, volcanos }) => {
             key={ev.id}
             lat={ev.geometries[0].coordinates[1]} 
             lng={ev.geometries[0].coordinates[0]} 
+            className={"fireIcon"} 
             markerIcon={fireIcon}
             onClick={() => setMarkerInfo({ id: ev.id, title: ev.title})}
             />
@@ -32,7 +33,8 @@ const Map = ({ eventData, center, zoom, wildfires, storms, volcanos }) => {
             return <LocationMarker 
             key={ev.id}
             lat={ev.geometries[0].coordinates[1]} 
-            lng={ev.geometries[0].coordinates[0]} 
+            lng={ev.geometries[0].coordinates[0]}
+            className={"volcanoIcon"} 
             markerIcon={volcanoIcon}
             onClick={() => setMarkerInfo({ id: ev.id, title: ev.title})}
             />
@@ -41,6 +43,7 @@ const Map = ({ eventData, center, zoom, wildfires, storms, volcanos }) => {
             key={ev.id}
             lat={ev.geometries[0].coordinates[1]} 
             lng={ev.geometries[0].coordinates[0]} 
+            className={"stormIcon"}
             markerIcon={stormIcon}
             onClick={() => setMarkerInfo({ id: ev.id, title: ev.title})}
             />
@@ -56,7 +59,7 @@ const Map = ({ eventData, center, zoom, wildfires, storms, volcanos }) => {
                 defaultCenter={ center }
                 defaultZoom={ zoom }
                 options={{
-                    mapTypeId: 'satellite'
+                    // mapTypeId: 'satellite'
                 }}
             >
                 {markers} 

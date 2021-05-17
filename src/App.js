@@ -1,20 +1,26 @@
-import  { useState, useEffect } from 'react'
+import  { useState, useEffect, useRef } from 'react'
+import { useOnClickOutside } from './hooks';
 
 // Component Imports
 import Map from './components/Map'
 import Loader from './components/Loader'
 import Header from './components/Header'
+import Menu from './components/Menu'
 
 
 
 function App() {
   const [eventData, setEventData] = useState([])
   const [loading, setLoading] = useState(false)
-
   //Button state
   const [wildfires, setWildfires] = useState(true)
   const [storms, setStorms] = useState(true)
   const [volcanos, setVolcanos] = useState(false)
+  //Menu state
+  const [open, setOpen] = useState(false)
+
+  const node = useRef(); 
+  useOnClickOutside(node, () => setOpen(false));
 
 
   useEffect(() => {
@@ -35,6 +41,7 @@ function App() {
 
   return (
     <div className="App">
+      <div ref={node}> 
       <Header 
         wildfires={wildfires}
         storms={storms}
@@ -42,14 +49,21 @@ function App() {
         setWildfires={setWildfires}
         setStorms={setStorms}
         setVolcanos={setVolcanos}
+        open={open}
+        setOpen={setOpen}
       />
+  
+      <Menu
+        open={open}
+        setOpen={setOpen}
+       />
+    </div>
       { !loading ? <Map 
         eventData={eventData} 
         wildfires={wildfires}
         storms={storms}
         volcanos={volcanos}
       /> : <Loader />}
-
     </div>
   );
 }

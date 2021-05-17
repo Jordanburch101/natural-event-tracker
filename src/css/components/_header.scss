@@ -4,38 +4,45 @@
 
 .header {
   display: flex;
-  justify-content: space-between;
-  height: 6rem;
+  justify-content: flex-start;
+  align-items: center;
+  height: 6vh;
   background-color: color(bg);
   position: fixed;
-
   top: 0;
   right: 0;
   left: 0;
-  z-index: 100;
+  z-index: 200;
+  h2 {
+    color: #fff;
+    margin: auto;
+  }
   ul {
     padding: 0;
     display: flex;
     align-items: center;
     justify-content: flex-start;
   }
-  svg {
-    padding: 0;
-    fill: #fff;
-  }
+
   &-button {
     padding: 2rem;
   }
   &-github {
     margin-left: 1rem;
-    margin-right: 5rem;
+    margin-right: 6rem;
+    width: 20px;
+    svg {
+      padding: 0;
+      fill: #fff;
+      width: 3.5rem;
+    }
   }
   button {
     display: inline-block;
     border: none;
     border-radius: 2rem;
     min-width: 12rem;
-    padding: 1rem 2rem;
+    padding: 0.8rem 2rem;
     margin: 0;
     text-decoration: none;
     background: #ffffff;

@@ -7,11 +7,14 @@ $colors: (
   primary: #0b3d92,
   secondary: #fd3e22,
   accent: hsl(30, 98%, 56%),
-  accent2: #ffb473,
+  accent2: #73eaff,
   bg: #242424,
   bg-dark: #2d2c2c,
   form-bg: #373737,
   form-text: #797979,
+  fire: #ff3333,
+  storm: #0a9dff,
+  volcano: #ff8800,
 );
 
 @function color($color-name) {
