@@ -4,16 +4,16 @@ const Menu = ({ open }) => {
     return (
         <div className={`${open ? "open" : "closed"} StyledMenu`}>
             <a href="/">
-            <span role="img" aria-label="about us">&#x1f481;&#x1f3fb;&#x200d;&#x2642;&#xfe0f;</span>
-            Map view
+            <span role="img" aria-label="about us">🌌</span>
+            Learn About EO
             </a>
             <a href="/">
-            <span role="img" aria-label="price">&#x1f4b8;</span>
-            Pricing
+            <span role="img" aria-label="price">🛰️</span>
+            About EONET
             </a>
             <a href="/">
-            <span role="img" aria-label="contact">&#x1f4e9;</span>
-            Contact
+            <span role="img" aria-label="contact">📁</span>
+            View Code
           </a>
       </div>
     )
