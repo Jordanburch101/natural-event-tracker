@@ -10,17 +10,37 @@ import Menu from './components/Menu'
 
 
 function App() {
+  //Loading and Data state
   const [eventData, setEventData] = useState([])
   const [loading, setLoading] = useState(false)
+
   //Button state
   const [wildfires, setWildfires] = useState(true)
   const [storms, setStorms] = useState(true)
   const [volcanos, setVolcanos] = useState(false)
+
   //Menu state
   const [open, setOpen] = useState(false)
-
   const node = useRef(); 
   useOnClickOutside(node, () => setOpen(false));
+
+  // //Map state
+  // const [mapViewState, setMapViewState] = useState()
+
+  // // const mapKey = mapViewState
+  // // const changeView = () => {
+  // //   if (mapViewState.options.mapTypeId === 'terrain') {
+  // //     setMapViewState({options: {
+  // //       mapTypeId: 'satellite'
+  // //     }})
+  // //   } else if (mapViewState.options.mapTypeId = 'satellite') {
+  // //     setMapViewState({options: {
+  // //       mapTypeId: 'terrain'
+  // //     }}) 
+  // //   }
+
+  // // }
+
 
 
   useEffect(() => {

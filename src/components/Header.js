@@ -45,7 +45,10 @@ const Header = ({
                 </li>
             </ul>
 
-            <h2>Natrual Event Tracker - Powerd by NASA 🛰️</h2>
+            <div className="title-container">
+                <h2>Natrual Event Tracker - Powerd by NASA 🛰️</h2>
+            </div>
+
 
             <Burger open={open} setOpen={setOpen} />
           

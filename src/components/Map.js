@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 
 // Component Imports
 import GoogleMapReact from 'google-map-react';
@@ -12,10 +12,16 @@ import fireIcon from '@iconify/icons-mdi/fire-alert'
 import stormIcon from '@iconify-icons/bi/tropical-storm';
 
 
-const Map = ({ eventData, center, zoom, wildfires, storms, volcanos }) => {
+const Map = ({ 
+    eventData, 
+    center, 
+    zoom, 
+    wildfires, 
+    storms, 
+    volcanos,
+}) => {
     const [markerInfo, setMarkerInfo] = useState(null)
-
-
+    
     const markers = eventData.map(ev => {
         if(wildfires && ev.categories[0].id === 8) {
             return <LocationMarker 
@@ -51,6 +57,7 @@ const Map = ({ eventData, center, zoom, wildfires, storms, volcanos }) => {
         return null
     })
 
+   
 
     return (
         <div className="map">
@@ -58,9 +65,9 @@ const Map = ({ eventData, center, zoom, wildfires, storms, volcanos }) => {
                 bootstrapURLKeys={{ key: 'AIzaSyA46buk9ewy_IWtL0c1sLQFiBtoE5iZFxA' }}
                 defaultCenter={ center }
                 defaultZoom={ zoom }
-                options={{
-                    // mapTypeId: 'satellite'
-                }}
+                options={{options: {
+                    mapTypeId: 'terrain'
+                }}}
             >
                 {markers} 
             </GoogleMapReact>

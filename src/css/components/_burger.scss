@@ -1,12 +1,13 @@
 .StyledBurger {
-  position: absolute;
-  top: 1.5rem;
-  right: 2rem;
+  // position: absolute;
+  // top: 1.5rem;
+  // right: 2rem;
+  margin-right: 2rem;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
   width: 2rem;
-  height: 2rem;
+  height: 2.5rem;
   background: transparent;
   border: none;
   cursor: pointer;
@@ -18,8 +19,8 @@
 }
 
 .burgerSlice {
-  width: 2rem;
-  height: 0.23rem;
+  width: 2.5rem;
+  height: 0.4rem;
   background: #fff;
   border-radius: 10px;
   transition: all 0.3s linear;

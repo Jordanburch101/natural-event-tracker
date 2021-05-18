@@ -13,10 +13,7 @@
   right: 0;
   left: 0;
   z-index: 200;
-  h2 {
-    color: #fff;
-    margin: auto;
-  }
+
   ul {
     padding: 0;
     display: flex;
@@ -72,5 +69,15 @@
   .active {
     background: color(secondary);
     color: #fff;
+  }
+}
+
+.title-container {
+  margin-left: auto;
+  margin-right: 5rem;
+
+  h2 {
+    color: #fff;
+    margin: auto;
   }
 }
