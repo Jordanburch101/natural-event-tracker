@@ -24,24 +24,6 @@ function App() {
   const node = useRef(); 
   useOnClickOutside(node, () => setOpen(false));
 
-  // //Map state
-  // const [mapViewState, setMapViewState] = useState()
-
-  // // const mapKey = mapViewState
-  // // const changeView = () => {
-  // //   if (mapViewState.options.mapTypeId === 'terrain') {
-  // //     setMapViewState({options: {
-  // //       mapTypeId: 'satellite'
-  // //     }})
-  // //   } else if (mapViewState.options.mapTypeId = 'satellite') {
-  // //     setMapViewState({options: {
-  // //       mapTypeId: 'terrain'
-  // //     }}) 
-  // //   }
-
-  // // }
-
-
 
   useEffect(() => {
     const fetchEvents = async () => {
@@ -89,3 +71,4 @@ function App() {
 }
 
 export default App;
+

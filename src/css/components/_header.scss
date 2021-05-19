@@ -70,11 +70,11 @@
 
     &:active {
       transform: scale(0.98);
-      background: color(accent);
+      // background: color(#fff);
     }
   }
   .active {
-    background: color(accent);
+    background: color(secondary);
     color: #fff;
   }
 }
