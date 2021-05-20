@@ -15,7 +15,7 @@
 .volcanoIcon {
   font-size: 3rem;
   cursor: pointer;
-  animation: 0.5s ease-in 0s 1 fadeIn;
+  animation: 0.2s ease-in 0s 1 fadeIn;
 }
 
 .location-markerInfo {
@@ -26,22 +26,20 @@
   min-height: 200px;
   padding: 20px;
   background-color: rgba(0, 0, 0, 0.6);
-  border-radius: 10px;
+  border-radius: 20px;
   font-size: 18px;
   color: #fff;
+  ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  li {
+    padding: 1rem 0rem;
+  }
 }
 
-.location-markerInfo ul {
-  list-style-type: none;
-  padding: 0;
-}
-
-.location-markerInfo li {
-  padding: 5px 0;
-}
-
-.location-Button {
-  padding: 20px;
+.location-button {
+  border-radius: 5px;
 }
 
 .stormIcon {

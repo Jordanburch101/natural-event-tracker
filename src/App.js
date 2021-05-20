@@ -19,27 +19,26 @@ function App() {
   const [storms, setStorms] = useState(true)
   const [volcanos, setVolcanos] = useState(false)
 
-  //Menu state
+  //Menu & MarkerInfo state
   const [open, setOpen] = useState(false)
   const node = useRef(); 
   useOnClickOutside(node, () => setOpen(false));
 
-
+  //Fetch data & set loading
   useEffect(() => {
     const fetchEvents = async () => {
       setLoading(true)
       const res = await fetch('https://eonet.sci.gsfc.nasa.gov/api/v2.1/events')
-      const { events } = await res.json()
 
+      const { events } = await res.json()
       setEventData(events)
       setLoading(false)
       
       console.log(events) // Remove later
     }
-
+    
     fetchEvents()
   }, [])
-
 
   return (
     <div className="App">

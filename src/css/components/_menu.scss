@@ -3,8 +3,8 @@
   z-index: 100;
   flex-direction: column;
   justify-content: center;
-  background-image: url(../../img/star-bg.jpg);
-  // background: color(form-bg);
+  background-image: url(../../img/stars.webp);
+  background-size: cover;
   height: 100vh;
   width: 100%;
   text-align: left;
@@ -21,13 +21,13 @@
   a {
     font-size: 2rem;
     text-transform: uppercase;
+    text-align: center;
     padding: 2rem 0;
     font-weight: bold;
     letter-spacing: 0.5rem;
     color: #fff;
     text-decoration: none;
     transition: color 0.3s linear;
-
     @include media(med) {
       font-size: 1.5rem;
       text-align: center;

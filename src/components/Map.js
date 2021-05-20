@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import  { useState} from 'react'
 
 // Component Imports
 import GoogleMapReact from 'google-map-react';
@@ -20,8 +20,7 @@ const Map = ({
     storms, 
     volcanos,
 }) => {
-    const [markerInfo, setMarkerInfo] = useState(null)
-    
+    const [markerInfo, setMarkerInfo] = useState(false)
     const markers = eventData.map(ev => {
         if(wildfires && ev.categories[0].id === 8) {
             return <LocationMarker 
@@ -30,7 +29,7 @@ const Map = ({
             lng={ev.geometries[0].coordinates[0]} 
             className={"fireIcon"} 
             markerIcon={fireIcon}
-            onClick={() => setMarkerInfo({ id: ev.id, title: ev.title})}
+            onClick={() => setMarkerInfo({ id: ev.id, title: ev.title, src: ev.sources[0].url})}
             />
         } else if(ev.id === "EONET_354") {
             return null
@@ -42,7 +41,7 @@ const Map = ({
             lng={ev.geometries[0].coordinates[0]}
             className={"volcanoIcon"} 
             markerIcon={volcanoIcon}
-            onClick={() => setMarkerInfo({ id: ev.id, title: ev.title})}
+            onClick={() => setMarkerInfo({ id: ev.id, title: ev.title, src: ev.sources[0].url})}
             />
         } else if(storms && ev.categories[0].id === 10) {
             return <LocationMarker 
@@ -51,14 +50,12 @@ const Map = ({
             lng={ev.geometries[0].coordinates[0]} 
             className={"stormIcon"}
             markerIcon={stormIcon}
-            onClick={() => setMarkerInfo({ id: ev.id, title: ev.title})}
+            onClick={() => setMarkerInfo({ id: ev.id, title: ev.title, src: ev.sources[0].url})}
             />
         }
         return null
     })
-
    
-
     return (
         <div className="map">
             <GoogleMapReact

@@ -3,9 +3,11 @@ const MarkerInfoBox = ({ info, onClick }) => {
         <div className="location-markerInfo">
             <h2>Event Location Info</h2>
             <ul>
-                <li>ID: <strong>{ info.id }</strong></li>
-                <li>Title: <strong>{ info.title }</strong></li>
+                <li><strong>ID:</strong> { info.id }</li>
+                <li><strong>Title:</strong> { info.title }</li>
+                <li><strong>Info:</strong> <a href={info.src} target="_blank" rel="noreferrer">{ info.src }</a></li>
             </ul>
+            {console.log(info.src)}
             <button className="location-button" onClick={onClick} value="Close">Close</button>
         </div>
     )

@@ -1,5 +1,3 @@
-import spinner from './spinner.gif';
-
 const Loader = () => {
     return (
         <div className="loader-container">
@@ -7,7 +5,7 @@ const Loader = () => {
             <div id='stars2'></div>
             <div id='stars3'></div>
             <div className="spinner">
-                <div class="loadingio-spinner-dual-ring-999dtroszrt"><div class="ldio-tjuxep0cgn">
+                <div className="loadingio-spinner-dual-ring-999dtroszrt"><div className="ldio-tjuxep0cgn">
                 <div></div><div><div></div></div>
                 </div></div>
             </div>
