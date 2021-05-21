@@ -3,16 +3,16 @@ import React from 'react'
 const Menu = ({ open }) => {
     return (
         <div className={`${open ? "open" : "closed"} StyledMenu`}>
-            <a href="/">
-            <span role="img" aria-label="about us">🌌</span>
+            <a target="_blank" rel="noreferrer" href="https://earthobservatory.nasa.gov/">
+            <span aria-label="about us">🌌</span>
             Learn About EO
             </a>
-            <a href="/">
-            <span role="img" aria-label="price">🛰️</span>
+            <a target="_blank" rel="noreferrer" href="https://eonet.sci.gsfc.nasa.gov/">
+            <span>🛰️</span>
             About EONET
             </a>
-            <a href="/">
-            <span role="img" aria-label="contact">📁</span>
+            <a target="_blank" rel="noreferrer" href="https://github.com/Jordanburch101/natural-event-tracker">
+            <span>📁</span>
             View Code
           </a>
       </div>

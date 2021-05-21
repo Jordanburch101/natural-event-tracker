@@ -37,7 +37,7 @@ function App() {
         setLoading(false)
 
       } catch (error) {
-        console.error(`There has been a problem fetching data: ${error}`);
+        console.error(`${error}: There has been a problem fetching data,`);
         setErrorState(true)
       }
     }
