@@ -48,7 +48,7 @@ List of features ready and TODOs for future development
 
 To-do list:
 
-- Add the ability to see Iceberg.
+- Add the ability to see Icebergs.
 - Add ability to see the path of Storms.
 
 ## Contact
