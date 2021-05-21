@@ -71,7 +71,6 @@ button {
 
   &:active {
     transform: scale(0.98);
-    // background: color(#fff);
   }
   @include media(lrg) {
     min-width: 12rem;

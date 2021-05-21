@@ -1,5 +1,3 @@
-// import { Icon } from '@iconify/react'
-// import locationIcon from '@iconify/icons-mdi/fire-alert'
 import Burger from './Burger'
 
 const Header = ({  
@@ -103,4 +101,3 @@ const Header = ({
 }
 
 export default Header
-// !selectors[0] ? setSelectors(selectors[0] = true) : setSelectors(selectors[0] = false)
