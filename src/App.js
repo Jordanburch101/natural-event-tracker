@@ -7,8 +7,6 @@ import Loader from './components/Loader'
 import Header from './components/Header'
 import Menu from './components/Menu'
 
-
-
 function App() {
   //Loading and Data state
   const [eventData, setEventData] = useState([])
@@ -24,21 +22,28 @@ function App() {
   const node = useRef(); 
   useOnClickOutside(node, () => setOpen(false));
 
-  //Fetch data & set loading
-  useEffect(() => {
-    const fetchEvents = async () => {
-      setLoading(true)
-      const res = await fetch('https://eonet.sci.gsfc.nasa.gov/api/v2.1/events')
+  // Fetch data & set loading
+  const [errorState, setErrorState] = useState(false)
 
-      const { events } = await res.json()
-      setEventData(events)
-      setLoading(false)
-      
-      console.log(events) // Remove later
+  useEffect(() => { 
+    const axios = require('axios');
+    const fetchEvents = async () => {
+      try {
+        setLoading(true)
+        const res = await axios.get('https://eonet.sci.gsfc.nasa.gov/api/v2.1/events');
+        const { events } = await res.data
+
+        setEventData(events)
+        setLoading(false)
+
+      } catch (error) {
+        console.error(`There has been a problem fetching data: ${error}`);
+        setErrorState(true)
+      }
     }
-    
     fetchEvents()
   }, [])
+  
 
   return (
     <div className="App">
@@ -64,7 +69,7 @@ function App() {
         wildfires={wildfires}
         storms={storms}
         volcanos={volcanos}
-      /> : <Loader />}
+      /> : <Loader errorState={errorState} />}
     </div>
   );
 }

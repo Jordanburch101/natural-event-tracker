@@ -29,12 +29,17 @@
   border-radius: 20px;
   font-size: 18px;
   color: #fff;
+  animation: 0.2s ease-in 0s 1 fadeIn;
   ul {
     list-style-type: none;
     padding: 0;
   }
   li {
     padding: 1rem 0rem;
+    max-width: 350px;
+    height: auto;
+  }
+  a {
   }
 }
 

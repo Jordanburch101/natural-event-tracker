@@ -7,7 +7,6 @@ const MarkerInfoBox = ({ info, onClick }) => {
                 <li><strong>Title:</strong> { info.title }</li>
                 <li><strong>Info:</strong> <a href={info.src} target="_blank" rel="noreferrer">{ info.src }</a></li>
             </ul>
-            {console.log(info.src)}
             <button className="location-button" onClick={onClick} value="Close">Close</button>
         </div>
     )
