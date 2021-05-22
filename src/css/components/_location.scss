@@ -4,9 +4,11 @@
 @keyframes fadeIn {
   0% {
     opacity: 0%;
+    visibility: hidden;
   }
   100% {
     opacity: 100%;
+    visibility: visible;
   }
 }
 
@@ -15,6 +17,7 @@
 .volcanoIcon {
   font-size: 3rem;
   cursor: pointer;
+  margin: 0;
   animation: 0.2s ease-in 0s 1 fadeIn;
 }
 
