@@ -14,7 +14,7 @@ const Header = ({
         <header className="header">
             <ul>
                 <li className="header-logo">
-                    <a href="https://eonet.sci.gsfc.nasa.gov/" target="_blank" rel="noreferrer">
+                    <a href=".">
                         <svg height="92" viewBox="0 0 110 92" width="110" xmlns="http://www.w3.org/2000/svg">
                             <circle cx="50.049" cy="45" fill="#0b3d91" r="40.14"/>
                             <g fill="#fff">
@@ -75,21 +75,21 @@ const Header = ({
                 <li className="header-button-container">
                     <div className="header-button"> 
                         <button 
-                            className={`${wildfires ? "active" : ""}`}
+                            className={`${wildfires ? "active" : ""} button`}
                             onClick={() => !wildfires ? setWildfires(true) : setWildfires(false)}>Wildfires
                         </button>
                     </div>
 
                     <div className="header-button">
                         <button 
-                            className={`${storms ? "active" : ""}`}
+                            className={`${storms ? "active" : ""} button`}
                             onClick={() => !storms ? setStorms(true) : setStorms(false)}>Storms
                         </button>
                     </div>
 
                     <div className="header-button">
                         <button 
-                            className={`${volcanos ? "active" : ""}`}
+                            className={`${volcanos ? "active" : ""} button`}
                             onClick={() => !volcanos ? setVolcanos(true) : setVolcanos(false)}>Volcanos
                         </button>
                     </div>

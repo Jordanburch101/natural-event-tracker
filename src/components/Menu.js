@@ -4,7 +4,7 @@ const Menu = ({ open }) => {
     return (
         <div className={`${open ? "open" : "closed"} StyledMenu`}>
             <a target="_blank" rel="noreferrer" href="https://earthobservatory.nasa.gov/">
-            <span aria-label="about us">🌌</span>
+            <span>📡</span>
             Learn About EO
             </a>
             <a target="_blank" rel="noreferrer" href="https://eonet.sci.gsfc.nasa.gov/">

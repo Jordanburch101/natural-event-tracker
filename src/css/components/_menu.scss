@@ -25,16 +25,10 @@
     padding: 2rem 0;
     font-weight: bold;
     letter-spacing: 0.5rem;
-    color: #fff;
     text-decoration: none;
-    transition: color 0.3s linear;
     @include media(med) {
       font-size: 1.5rem;
       text-align: center;
-    }
-
-    &:hover {
-      color: color(accent);
     }
   }
 }
